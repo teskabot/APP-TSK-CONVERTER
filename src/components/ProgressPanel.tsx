@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AlertTriangle, FolderOpen, Info, RefreshCw } from "lucide-react";
-import { cancelConversion, openFolder } from "../lib/ipc";
+import { cancelConversion, openConversionLog, openOutputDirectory } from "../lib/ipc";
 import { formatBytes, formatDuration } from "../lib/formats";
 import { useBatch } from "../store/useBatch";
 import type { Notice } from "../types";
@@ -9,10 +9,10 @@ export function ProgressPanel() {
   const { phase, progress, result, retryFailed, reset } = useBatch();
   const [actionError, setActionError] = useState<string | null>(null);
 
-  const openPath = async (path: string) => {
+  const openLocation = async (open: () => Promise<void>) => {
     setActionError(null);
     try {
-      await openFolder(path);
+      await open();
     } catch (error) {
       setActionError(error instanceof Error ? error.message : String(error));
     }
@@ -86,7 +86,7 @@ export function ProgressPanel() {
               <button onClick={retryFailed} className="inline-flex items-center gap-2 rounded-md border border-line px-3 py-1.5 text-sm hover:border-ink">
                 <RefreshCw size={14} /> Reintentar fallidos
               </button>
-              <button onClick={() => openPath(result.logPath)} className="ml-3 inline-flex items-center gap-2 rounded-md border border-line px-3 py-1.5 text-sm hover:border-ink">
+              <button onClick={() => openLocation(openConversionLog)} className="ml-3 inline-flex items-center gap-2 rounded-md border border-line px-3 py-1.5 text-sm hover:border-ink">
                 Abrir log técnico
               </button>
             </div>
@@ -97,7 +97,7 @@ export function ProgressPanel() {
 
         <div className="flex items-center gap-4">
           <button
-            onClick={() => openPath(result.outputDir)}
+            onClick={() => openLocation(openOutputDirectory)}
             className="inline-flex items-center gap-2 rounded-md bg-accent px-6 py-3 text-base font-medium text-sheet hover:brightness-110"
           >
             <FolderOpen size={18} /> Abrir carpeta de destino

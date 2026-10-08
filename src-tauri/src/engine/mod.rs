@@ -1,8 +1,9 @@
 //! Motor de conversión.
 //!   audio.rs -> FFmpeg/ffprobe como sidecar (passthrough bit-exact, bits, tags, carátula)
-//!   image.rs -> pendiente (image-rs / mozjpeg / libwebp / libheif / libraw)
+//!   raster.rs -> imágenes: image-rs, mozjpeg, libwebp, libheif (solo entrada), resvg, imagepipe
 
 pub mod audio;
+pub mod raster;
 
 use crate::models::{ConflictPolicy, JobSpec, MediaKind};
 use std::collections::HashSet;
@@ -23,8 +24,6 @@ pub enum ConvertError {
     NoAudio,
     #[error("falta FFmpeg o un códec en esta instalación")]
     EngineMissing,
-    #[error("este formato aún no está disponible")]
-    NotYet,
     #[error("fallo de conversión: {0}")]
     Failed(String),
     #[error("error de disco: {0}")]
@@ -41,7 +40,6 @@ impl ConvertError {
             ConvertError::Unsupported => "Formato no compatible".into(),
             ConvertError::NoAudio => "No tiene pista de audio".into(),
             ConvertError::EngineMissing => "Falta un componente de la app. Reinstálala".into(),
-            ConvertError::NotYet => "La conversión de imágenes aún no está implementada".into(),
             ConvertError::Failed(detail) => format!("Falló la conversión: {detail}"),
             ConvertError::Io(_) => "No se pudo escribir en la carpeta de destino".into(),
         }
@@ -71,6 +69,14 @@ pub fn thread_count(profile: &str) -> usize {
     n.max(1)
 }
 
+/// Extensión de archivo para un formato de destino ("jpeg" → "jpg").
+pub fn out_ext(target: &str) -> &str {
+    match target {
+        "jpeg" => "jpg",
+        other => other,
+    }
+}
+
 // ---------- Reserva de destinos (evita que dos hilos escriban el mismo archivo) ----------
 
 fn reserved() -> &'static Mutex<HashSet<String>> {
@@ -92,7 +98,7 @@ fn key(p: &Path) -> String {
 /// ni siquiera con "Sobrescribir": el segundo se renombra.
 pub(crate) fn resolve_target(job: &JobSpec, dir: &Path, policy: ConflictPolicy) -> Option<PathBuf> {
     let stem = job.item.path.file_stem()?.to_string_lossy().into_owned();
-    let ext = &job.target_format;
+    let ext = out_ext(&job.target_format);
     let mut taken = reserved().lock().unwrap();
 
     let base = dir.join(format!("{stem}.{ext}"));
@@ -134,7 +140,6 @@ pub fn convert_one(
     };
     match job.item.kind {
         MediaKind::Audio => audio::convert(job, &target),
-        // Honesto antes que falso: no reportar éxito sin haber convertido nada.
-        MediaKind::Image => Err(ConvertError::NotYet),
+        MediaKind::Image => raster::convert(job, &target),
     }
 }

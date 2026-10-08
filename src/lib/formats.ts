@@ -13,7 +13,6 @@ export const OUTPUT_FORMATS: Record<MediaKind, FormatOption[]> = {
     { value: "webp", label: "WEBP" },
     { value: "jpeg", label: "JPEG", lossy: true },
     { value: "tiff", label: "TIFF" },
-    { value: "heic", label: "HEIC", lossy: true },
   ],
   audio: [
     { value: "webm", label: "WEBM (Opus)", lossy: true },

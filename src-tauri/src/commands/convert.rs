@@ -1,4 +1,4 @@
-use super::CancelFlag;
+use super::{CancelFlag, LastOutputDirectory};
 use crate::engine;
 use crate::models::{ConvertRequest, Failure, Notice, ProgressEvent};
 use rayon::prelude::*;
@@ -8,7 +8,8 @@ use std::time::Instant;
 use std::time::{SystemTime, UNIX_EPOCH};
 use std::{fs::OpenOptions, io::Write, path::PathBuf, sync::OnceLock};
 use tauri::ipc::Channel;
-use tauri::State;
+use tauri::{AppHandle, State};
+use tauri_plugin_opener::OpenerExt;
 
 fn conversion_log_path() -> PathBuf {
     dirs::data_local_dir()
@@ -47,11 +48,13 @@ pub async fn start_conversion(
     request: ConvertRequest,
     on_event: Channel<ProgressEvent>,
     cancel: State<'_, CancelFlag>,
+    last_output_dir: State<'_, LastOutputDirectory>,
 ) -> Result<(), String> {
     cancel.0.store(false, Ordering::SeqCst);
     let threads = engine::thread_count(&request.thread_profile);
     let total = request.jobs.len();
     std::fs::create_dir_all(&request.output_dir).map_err(|e| e.to_string())?;
+    *last_output_dir.0.lock().map_err(|e| e.to_string())? = Some(request.output_dir.clone());
     let log_path = conversion_log_path();
 
     engine::begin_batch();
@@ -151,4 +154,34 @@ pub async fn start_conversion(
 #[tauri::command]
 pub fn cancel_conversion(cancel: State<'_, CancelFlag>) {
     cancel.0.store(true, Ordering::SeqCst);
+}
+
+#[tauri::command]
+pub fn open_output_directory(
+    app: AppHandle,
+    last_output_dir: State<'_, LastOutputDirectory>,
+) -> Result<(), String> {
+    let path = last_output_dir
+        .0
+        .lock()
+        .map_err(|e| e.to_string())?
+        .clone()
+        .ok_or_else(|| "Todavía no hay una carpeta de destino para abrir".to_owned())?;
+    if !path.is_dir() {
+        return Err(format!("La carpeta de destino ya no existe: {}", path.display()));
+    }
+    app.opener()
+        .open_path(path.to_string_lossy(), None::<&str>)
+        .map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+pub fn open_conversion_log(app: AppHandle) -> Result<(), String> {
+    let path = conversion_log_path();
+    if !path.is_file() {
+        return Err(format!("El log técnico todavía no existe: {}", path.display()));
+    }
+    app.opener()
+        .open_path(path.to_string_lossy(), None::<&str>)
+        .map_err(|e| e.to_string())
 }

@@ -4,7 +4,7 @@ use std::path::Path;
 use walkdir::WalkDir;
 
 const IMAGE_EXT: &[&str] = &[
-    "png", "webp", "jpg", "jpeg", "heic", "heif", "tif", "tiff", "svg", "cr2", "nef", "arw",
+    "png", "webp", "jpg", "jpeg", "heic", "heif", "tif", "tiff", "svg", "cr2", "nef", "arw", "dng", "raf", "orf", "rw2",
 ];
 const AUDIO_EXT: &[&str] = &["webm", "mp3", "wav", "flac", "aac", "m4a", "ogg", "opus"];
 const VIDEO_EXT: &[&str] = &["mp4", "mov", "mkv", "avi", "m4v"];

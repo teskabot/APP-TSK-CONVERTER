@@ -23,9 +23,24 @@ num_cpus = "1"
 thiserror = "1"
 uuid = { version = "1", features = ["v4"] }
 
+# --- motor de imágenes ---
+image = { version = "0.24.9", default-features = false, features = ["png", "jpeg", "tiff"] }
+img-parts = "0.3"        # ICC y EXIF en JPEG/PNG/WebP sin recodificar
+mozjpeg = "0.10"         # salida JPEG
+webp = "0.3"             # entrada y salida WebP (libwebp)
+tiff = "0.9"             # salida TIFF (con ICC)
+resvg = { version = "0.45", default-features = false, features = ["text", "system-fonts"] }  # SVG de entrada
+imagepipe = "0.5"        # RAW de entrada: revelado básico (CR2, NEF, ARW, DNG...)
+# HEIC solo de ENTRADA: decodificar evita el codificador HEVC (x265, GPL y con patentes).
+# Requiere libheif >= 1.17 nativa (ver LEEME-IMAGENES.md); por eso es opcional.
+libheif-rs = { version = "2", default-features = false, features = ["v1_17"], optional = true }
+
+[features]
+default = []   # HEIC necesita libheif nativa: se activa con --features heic (ver LEEME-IMAGENES.md)
+heic = ["dep:libheif-rs"]
+
 [profile.release]
 lto = true
 codegen-units = 1
 opt-level = "s"
 strip = true
-panic = "abort"

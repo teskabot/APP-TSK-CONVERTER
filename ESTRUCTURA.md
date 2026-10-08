@@ -24,4 +24,5 @@ conversor/
       │  ├─ conflicts.rs       (aviso de duplicados antes de procesar)
       │  └─ convert.rs         (pool Rayon + eventos de progreso + cancelar)
       └─ engine/
-         └─ mod.rs             (convert_one: punto de extensión para audio.rs / image.rs)
+         ├─ raster.rs
+         └─ mod.rs             (convert_one: reparte a audio.rs o raster.rs)

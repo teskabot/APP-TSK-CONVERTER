@@ -1,3 +1,4 @@
+use crate::engine::out_ext;
 use crate::models::{Conflict, JobSpec};
 use std::path::PathBuf;
 
@@ -7,7 +8,7 @@ pub fn check_conflicts(jobs: Vec<JobSpec>, output_dir: PathBuf) -> Vec<Conflict>
     jobs.iter()
         .filter_map(|job| {
             let stem = job.item.path.file_stem()?.to_string_lossy().into_owned();
-            let target = output_dir.join(format!("{stem}.{}", job.target_format));
+            let target = output_dir.join(format!("{stem}.{}", out_ext(&job.target_format)));
             target.exists().then(|| Conflict {
                 item_id: job.item.id.clone(),
                 existing_path: target,

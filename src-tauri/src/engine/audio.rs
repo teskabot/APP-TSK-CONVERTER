@@ -457,7 +457,7 @@ fn ffmpeg_args(info: &AudioInfo, plan: &Plan, target: &str, input: &Path, output
 }
 
 /// `dir/x.flac` → `dir/.x.partial.flac` (conserva la extensión para que FFmpeg elija el muxer).
-fn partial_path(target: &Path) -> PathBuf {
+pub(crate) fn partial_path(target: &Path) -> PathBuf {
     let stem = target.file_stem().map(|s| s.to_string_lossy().into_owned()).unwrap_or_default();
     let ext = target.extension().map(|s| s.to_string_lossy().into_owned()).unwrap_or_default();
     target.with_file_name(format!(".{stem}.partial.{ext}"))

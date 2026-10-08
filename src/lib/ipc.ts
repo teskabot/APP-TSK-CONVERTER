@@ -1,7 +1,6 @@
 import { Channel, invoke } from "@tauri-apps/api/core";
 import { getCurrentWebview } from "@tauri-apps/api/webview";
 import { open } from "@tauri-apps/plugin-dialog";
-import { openPath } from "@tauri-apps/plugin-opener";
 import type {
   Conflict, ConvertRequest, JobSpec, MediaItem, ProgressEvent, SystemInfo,
 } from "../types";
@@ -18,7 +17,8 @@ export function startConversion(request: ConvertRequest, onEvent: (e: ProgressEv
   return invoke<void>("start_conversion", { request, onEvent: channel });
 }
 
-export const openFolder = (path: string) => openPath(path);
+export const openOutputDirectory = () => invoke<void>("open_output_directory");
+export const openConversionLog = () => invoke<void>("open_conversion_log");
 
 export async function pickFiles(): Promise<string[]> {
   const r = await open({ multiple: true, directory: false });
