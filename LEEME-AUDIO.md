@@ -25,18 +25,39 @@
 - Carátula: solo MP3, M4A y FLAC. Etiquetas: AAC suelto (ADTS) no admite.
 - M4A: conserva carátula y etiquetas estándar, pero no las personalizadas.
 
-## Para publicar: FFmpeg propio, LGPL y mínimo
-No uses un ffmpeg de sistema ni uno "GPL" (arrastra la licencia a tu app).
-Compílalo solo con audio y sin GPL; además pesa pocos MB:
+## Para publicar: FFmpeg propio
+No uses un ffmpeg de sistema: puede depender de bibliotecas que no estén instaladas
+en los equipos de tus usuarios. El script `scripts/build-ffmpeg-arm64.sh` compila
+sidecars ARM64 desde una Mac Intel usando el SDK de macOS y los instala en
+`src-tauri/binaries/`. Necesita Xcode Command Line Tools, `pkg-config`, `curl`,
+`tar` y `make`.
 
-    ./configure --disable-gpl --disable-nonfree --disable-everything \
-      --enable-protocol=file --enable-ffprobe \
-      --enable-demuxer=wav,flac,mp3,ogg,matroska,mov,aac \
-      --enable-muxer=wav,flac,mp3,ogg,webm,ipod,adts \
-      --enable-decoder=pcm_*,flac,mp3*,aac*,alac,opus,vorbis,libopus,mjpeg,png \
-      --enable-encoder=pcm_*,flac,aac,libopus,libmp3lame,libvorbis,mjpeg,png \
-      --enable-parser=aac,flac,mpegaudio,opus,vorbis,mjpeg,png \
-      --enable-libopus --enable-libmp3lame --enable-libvorbis \
-      --enable-filter=aresample,aformat,anull
+**Licencia:** la configuración abajo activa `libmp3lame`. LAME es GPL, por lo que
+FFmpeg requiere `--enable-gpl` y el binario resultante es GPL, no LGPL-only.
+Si distribuyes ese binario, revisa y cumple las obligaciones de GPL, incluida la
+forma de ofrecer el código fuente correspondiente. Para mantener FFmpeg bajo
+LGPL habría que quitar LAME y `libmp3lame` (y cambiar la funcionalidad de salida
+MP3 de la aplicación).
 
-(Revisa la lista contra `cargo test`: si falta algo, FFmpeg lo dirá como "Unknown encoder/decoder".)
+El script se ejecuta desde cualquier directorio:
+
+    bash scripts/build-ffmpeg-arm64.sh
+
+Descarga las fuentes oficiales de Ogg, Opus, LAME, Vorbis y FFmpeg; compila las
+bibliotecas estáticas para Apple Silicon y comprueba que los ejecutables
+resultantes sean ARM64 y no dependan de rutas de Homebrew.
+
+El script activa `--enable-gpl` porque incluye LAME. Los selectores de codecs
+usados son:
+
+    --enable-protocol=file
+    --enable-demuxer=wav,flac,mp3,ogg,matroska,mov,aac
+    --enable-muxer=wav,flac,mp3,ogg,webm,ipod,adts
+    --enable-decoder=pcm_*,flac,mp3*,aac*,alac,opus,vorbis,libopus,libvorbis,mjpeg,png
+    --enable-encoder=pcm_*,flac,aac,libopus,libmp3lame,libvorbis,mjpeg,png
+    --enable-parser=aac,flac,mpegaudio,opus,vorbis,mjpeg,png
+    --enable-libopus --enable-libmp3lame --enable-libvorbis
+    --enable-filter=aresample,aformat,anull
+
+Revisa la lista contra `cargo test`: si falta algo, FFmpeg lo dirá como
+"Unknown encoder/decoder".
