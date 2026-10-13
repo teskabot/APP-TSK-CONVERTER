@@ -1,0 +1,70 @@
+CONVERSOR - VERSION 0.1.0
+
+DESCRIPCION
+-----------
+Conversor es una aplicacion de escritorio para convertir imagenes y audio por
+lotes. Permite seleccionar archivos o carpetas, arrastrarlos a la ventana y
+convertirlos localmente en el equipo, sin subirlos a un servicio externo.
+
+Al seleccionar una carpeta, la aplicacion busca archivos compatibles dentro de
+ella y sus subcarpetas. Se puede elegir un formato de salida y una calidad
+Maxima, Balanceada o Compacta para cada grupo, y cambiar el formato de archivos
+individuales. Tambien permite elegir la carpeta de destino y decidir que hacer
+si ya existe un archivo con el mismo nombre: renombrarlo, omitirlo o
+sobrescribirlo.
+
+FORMATOS
+--------
+Imagenes de entrada: PNG, WEBP, JPEG/JPG, TIFF/TIF, SVG y archivos RAW
+(CR2, NEF, ARW, DNG, RAF, ORF y RW2).
+Salidas de imagen: PNG, WEBP, JPEG y TIFF.
+
+Audio de entrada: WEBM, MP3, WAV, FLAC, AAC, M4A, OGG y OPUS.
+Salidas de audio: WEBM (Opus), MP3, WAV, FLAC, AAC, M4A y OGG.
+Tambien puede extraer el audio de videos MP4, MOV, MKV, AVI y M4V.
+
+HEIC/HEIF: su compatibilidad depende de que la compilacion incluya el soporte
+opcional para HEIC. Si el release no lo indica, puede que esos archivos no se
+puedan convertir.
+
+Algunos formatos aplican compresion con perdida y otros no admiten todos los
+metadatos, perfiles de color o caracteristicas del archivo original. La
+aplicacion muestra avisos cuando detecta limitaciones durante la conversion.
+
+INSTALACION EN WINDOWS
+----------------------
+Descarga el instalador x64 desde la seccion Assets del release. Puedes elegir:
+
+- Conversor_0.1.0_x64-setup.exe (recomendado): ejecuta el instalador y sigue
+  las instrucciones en pantalla.
+- Conversor_0.1.0_x64_en-US.msi: abre el paquete MSI y completa el asistente.
+
+Esta aplicacion no esta firmada digitalmente. Windows puede mostrar una alerta
+de Microsoft Defender SmartScreen o indicar que el editor es desconocido. Si
+descargaste el instalador desde el release oficial y quieres continuar, elige
+"Mas informacion" y luego "Ejecutar de todas formas". Si Windows muestra una
+confirmacion adicional, revisa el nombre del archivo antes de aceptarla.
+
+INSTALACION EN macOS
+--------------------
+Descarga el archivo .dmg para tu Mac desde la seccion Assets del release. Abre
+el .dmg y arrastra Conversor a la carpeta Aplicaciones. Luego abre la app desde
+Aplicaciones.
+
+La aplicacion no esta firmada ni notarizada por Apple. macOS puede indicar que
+no se puede verificar el desarrollador o impedir el primer inicio. Para abrirla
+si descargaste el archivo del release oficial:
+
+1. En Finder, abre Aplicaciones.
+2. Haz Control-clic (o clic derecho) sobre Conversor y selecciona "Abrir".
+3. En el aviso de seguridad, selecciona "Abrir" para confirmar.
+
+Si no aparece esa opcion, intenta abrir la app una vez y luego ve a Ajustes del
+Sistema > Privacidad y seguridad. En la seccion de seguridad, selecciona
+"Abrir igualmente" junto al aviso de Conversor y confirma.
+
+AVISO DE SEGURIDAD
+------------------
+Descarga e instala la aplicacion solamente desde un release de confianza.
+Que el sistema operativo muestre una advertencia se debe a que la app no esta
+firmada; no es una garantia de que cualquier archivo descargado sea seguro.
