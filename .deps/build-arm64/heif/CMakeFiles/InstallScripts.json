@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/heif/cmake_install.cmake",
+		"/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/heif/libheif/cmake_install.cmake",
+		"/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/heif/libheif/plugins/cmake_install.cmake",
+		"/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/heif/gnome/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

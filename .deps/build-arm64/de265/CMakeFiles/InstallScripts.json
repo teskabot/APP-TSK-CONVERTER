@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/de265/cmake_install.cmake",
+		"/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/de265/libde265/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

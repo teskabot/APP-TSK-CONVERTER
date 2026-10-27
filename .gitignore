@@ -3,4 +3,4 @@ dist/
 src-tauri/target/
 src-tauri/binaries/ffmpeg-*
 src-tauri/binaries/ffprobe-*
-.DS_Store
+.DS_Store.deps/

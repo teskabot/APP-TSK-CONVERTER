@@ -23,9 +23,8 @@ Audio de entrada: WEBM, MP3, WAV, FLAC, AAC, M4A, OGG y OPUS.
 Salidas de audio: WEBM (Opus), MP3, WAV, FLAC, AAC, M4A y OGG.
 Tambien puede extraer el audio de videos MP4, MOV, MKV, AVI y M4V.
 
-HEIC/HEIF: su compatibilidad depende de que la compilacion incluya el soporte
-opcional para HEIC. Si el release no lo indica, puede que esos archivos no se
-puedan convertir.
+HEIC/HEIF: esta version incluye soporte completo para archivos HEIC y HEIF
+(el formato de foto de iPhone y iPad). No requiere instalar nada adicional.
 
 Algunos formatos aplican compresion con perdida y otros no admiten todos los
 metadatos, perfiles de color o caracteristicas del archivo original. La
@@ -47,9 +46,9 @@ confirmacion adicional, revisa el nombre del archivo antes de aceptarla.
 
 INSTALACION EN macOS
 --------------------
-Descarga el archivo .dmg para tu Mac desde la seccion Assets del release. Abre
-el .dmg y arrastra Conversor a la carpeta Aplicaciones. Luego abre la app desde
-Aplicaciones.
+Descarga el archivo Conversor_0.1.0_universal.dmg desde la seccion Assets del
+release. Es compatible con Macs Intel y Apple Silicon. Abre el .dmg y arrastra
+Conversor a la carpeta Aplicaciones. Luego abre la app desde Aplicaciones.
 
 La aplicacion no esta firmada ni notarizada por Apple. macOS puede indicar que
 no se puede verificar el desarrollador o impedir el primer inicio. Para abrirla

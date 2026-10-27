@@ -1,0 +1,7 @@
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/libheif-arm64/lib/libde265.a
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/libheif-arm64/include/libde265/de265.h
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/libheif-arm64/include/libde265/de265-version.h
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/libheif-arm64/lib/cmake/libde265/libde265-config.cmake
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/libheif-arm64/lib/cmake/libde265/libde265-config-release.cmake
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/libheif-arm64/lib/cmake/libde265/libde265-config-version.cmake
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/libheif-arm64/lib/pkgconfig/libde265.pc

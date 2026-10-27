@@ -1,0 +1,14 @@
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/de265/CMakeFiles/dist.dir
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/de265/CMakeFiles/edit_cache.dir
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/de265/CMakeFiles/rebuild_cache.dir
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/de265/CMakeFiles/list_install_components.dir
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/de265/CMakeFiles/install.dir
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/de265/CMakeFiles/install/local.dir
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/de265/CMakeFiles/install/strip.dir
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/de265/libde265/CMakeFiles/de265.dir
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/de265/libde265/CMakeFiles/edit_cache.dir
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/de265/libde265/CMakeFiles/rebuild_cache.dir
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/de265/libde265/CMakeFiles/list_install_components.dir
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/de265/libde265/CMakeFiles/install.dir
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/de265/libde265/CMakeFiles/install/local.dir
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/.deps/build-arm64/de265/libde265/CMakeFiles/install/strip.dir

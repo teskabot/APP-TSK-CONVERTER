@@ -1,0 +1,358 @@
+
+> conversor@0.1.0 release:mac
+> bash scripts/release-macos.sh
+
+        Info Looking up installed tauri packages to check mismatched versions...
+     Running beforeBuildCommand `npm run build`
+
+> conversor@0.1.0 build
+> tsc && vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 1590 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                              0.39 kB │ gzip:  0.26 kB
+dist/assets/geist-cyrillic-ext-wght-normal-DjL33-gN.woff2    7.42 kB
+dist/assets/geist-vietnamese-wght-normal-6IgcOCM7.woff2      8.00 kB
+dist/assets/geist-cyrillic-wght-normal-BEAKL7Jp.woff2       15.08 kB
+dist/assets/geist-latin-ext-wght-normal-DC-KSUi6.woff2      16.51 kB
+dist/assets/geist-latin-wght-normal-BgDaEnEv.woff2          29.40 kB
+dist/assets/index-AJJ49bZb.css                              20.29 kB │ gzip:  5.09 kB
+dist/assets/index-3yupxT3-.js                              186.39 kB │ gzip: 57.73 kB
+✓ built in 3.86s
+   Compiling conversor v0.1.0 (/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri)
+    Finished `release` profile [optimized] target(s) in 4m 16s
+   Compiling serde_core v1.0.229
+   Compiling cfg-if v1.0.5
+   Compiling libc v0.2.189
+   Compiling stable_deref_trait v1.2.1
+   Compiling memchr v2.8.3
+   Compiling serde v1.0.229
+   Compiling zerofrom v0.1.8
+   Compiling simd-adler32 v0.3.10
+   Compiling smallvec v1.16.2
+   Compiling crossbeam-utils v0.8.23
+   Compiling yoke v0.8.3
+   Compiling log v0.4.34
+   Compiling objc2-exception-helper v0.1.1
+   Compiling adler2 v2.0.1
+   Compiling zerovec v0.11.8
+   Compiling crc32fast v1.5.2
+   Compiling objc2-encode v4.1.0
+   Compiling num-traits v0.2.19
+   Compiling tinystr v0.8.4
+   Compiling miniz_oxide v0.9.1
+   Compiling thiserror v2.0.21
+   Compiling writeable v0.6.4
+   Compiling objc2 v0.6.4
+   Compiling litemap v0.8.3
+   Compiling potential_utf v0.1.6
+   Compiling flate2 v1.1.10
+   Compiling icu_locale_core v2.3.0
+   Compiling zerotrie v0.2.5
+   Compiling utf8_iter v1.0.4
+   Compiling bytemuck v1.25.2
+   Compiling icu_collections v2.3.0
+   Compiling miniz_oxide v0.8.9
+   Compiling anyhow v1.0.104
+   Compiling icu_normalizer_data v2.3.0
+   Compiling bitflags v2.13.2
+   Compiling icu_provider v2.3.1
+   Compiling icu_properties_data v2.3.0
+   Compiling arrayvec v0.7.8
+   Compiling crossbeam-epoch v0.9.21
+   Compiling icu_properties v2.3.0
+   Compiling icu_normalizer v2.3.0
+   Compiling fdeflate v0.3.7
+   Compiling itoa v1.0.18
+   Compiling crossbeam-deque v0.8.8
+   Compiling libm v0.2.16
+   Compiling block2 v0.6.2
+   Compiling objc2-core-foundation v0.3.2
+   Compiling zmij v1.0.23
+   Compiling siphasher v1.0.4
+   Compiling percent-encoding v2.3.2
+   Compiling form_urlencoded v1.2.2
+   Compiling rayon-core v1.13.0
+   Compiling serde_json v1.0.151
+   Compiling getrandom v0.4.3
+   Compiling time-core v0.1.9
+   Compiling bytes v1.12.1
+   Compiling num-conv v0.2.2
+   Compiling powerfmt v0.2.0
+   Compiling deranged v0.5.8
+   Compiling idna_adapter v1.2.2
+   Compiling idna v1.1.0
+   Compiling url v2.5.8
+   Compiling objc2-foundation v0.3.2
+   Compiling aho-corasick v1.1.5
+   Compiling time v0.3.55
+   Compiling typeid v1.0.3
+   Compiling either v1.18.0
+   Compiling alloc-no-stdlib v3.0.0
+   Compiling option-ext v0.2.0
+   Compiling regex-syntax v0.8.11
+   Compiling raw-window-handle v0.6.2
+   Compiling alloc-stdlib v0.3.0
+   Compiling equator v0.4.2
+   Compiling uuid v1.26.1
+   Compiling dpi v0.1.2
+   Compiling num-integer v0.1.47
+   Compiling erased-serde v0.4.10
+   Compiling web-time v1.1.0
+   Compiling winnow v1.0.4
+   Compiling hashbrown v0.17.1
+   Compiling fnv v1.0.7
+   Compiling core-foundation-sys v0.8.7
+   Compiling equivalent v1.0.2
+   Compiling cfb v0.14.0
+   Compiling core-foundation v0.10.1
+   Compiling toml_parser v1.1.3+spec-1.1.0
+   Compiling indexmap v2.14.2
+   Compiling regex-automata v0.4.18
+   Compiling num-bigint v0.4.8
+   Compiling cookie v0.18.2
+   Compiling tauri v2.12.1
+   Compiling aligned-vec v0.6.4
+   Compiling brotli-decompressor v6.0.1
+   Compiling rayon v1.12.0
+   Compiling jsonptr v0.7.1
+   Compiling http v1.5.0
+   Compiling phf_shared v0.13.1
+   Compiling png v0.18.1
+   Compiling regex v1.13.1
+   Compiling objc2-quartz-core v0.3.2
+   Compiling toml_datetime v1.1.1+spec-1.1.0
+   Compiling serde_spanned v1.1.1
+   Compiling quick-xml v0.42.0
+   Compiling toml_writer v1.1.2+spec-1.1.0
+   Compiling objc2-app-kit v0.3.2
+   Compiling same-file v1.0.6
+   Compiling foreign-types-shared v0.3.1
+   Compiling base64 v0.23.1
+   Compiling foreign-types v0.5.0
+   Compiling walkdir v2.5.0
+   Compiling toml v1.1.6+spec-1.1.0
+   Compiling plist v1.10.1
+   Compiling zerocopy v0.8.60
+   Compiling urlpattern v0.6.0
+   Compiling phf v0.13.1
+   Compiling brotli v9.0.0
+   Compiling num-rational v0.4.2
+   Compiling json-patch v4.2.0
+   Compiling v_frame v0.3.9
+   Compiling serde-untagged v0.1.9
+   Compiling infer v0.22.0
+   Compiling core-graphics-types v0.2.0
+   Compiling dirs-sys v0.5.0
+   Compiling dispatch2 v0.3.1
+   Compiling serde_with v3.24.0
+   Compiling crossbeam-channel v0.5.17
+   Compiling as-slice v0.2.1
+   Compiling semver v1.0.28
+   Compiling weezl v0.1.12
+   Compiling dunce v1.0.5
+   Compiling ctor v1.0.13
+   Compiling once_cell v1.21.4
+   Compiling glob v0.3.4
+   Compiling tauri-runtime v2.12.1
+   Compiling av-scenechange v0.14.1
+   Compiling aligned v0.4.3
+   Compiling dirs v7.0.0
+   Compiling core-graphics v0.25.0
+   Compiling wry v0.57.0
+   Compiling rgb v0.8.53
+   Compiling no_std_io2 v0.9.4
+   Compiling nom v8.0.0
+   Compiling y4m v0.8.0
+   Compiling quick-error v2.0.1
+   Compiling muda v0.20.0
+   Compiling getrandom v0.3.4
+   Compiling tauri-runtime-wry v2.12.1
+   Compiling tauri-utils v2.10.1
+   Compiling profiling v1.0.18
+   Compiling pulp v0.22.3
+   Compiling bitstream-io v4.10.0
+   Compiling rav1e v0.8.1
+   Compiling maybe-rayon v0.1.1
+   Compiling itertools v0.14.0
+   Compiling core_maths v0.1.1
+   Compiling keyboard-types v0.8.3
+   Compiling raw-cpuid v11.6.0
+   Compiling num-complex v0.4.6
+   Compiling objc2-web-kit v0.3.2
+   Compiling tao v0.37.1
+   Compiling av1-grain v0.2.5
+   Compiling pulp-wasm-simd-flag v0.1.1
+   Compiling new_debug_unreachable v1.0.6
+   Compiling reborrow v0.5.5
+   Compiling zune-core v0.5.3
+   Compiling float-cmp v0.9.0
+   Compiling pin-project-lite v0.2.17
+   Compiling color_quant v1.1.0
+   Compiling imgref v1.12.3
+   Compiling half v2.7.1
+   Compiling loop9 v0.1.5
+   Compiling tokio v1.53.1
+   Compiling strict-num v0.1.1
+   Compiling zune-jpeg v0.5.15
+   Compiling serialize-to-javascript v0.1.2
+   Compiling slotmap v1.1.1
+   Compiling window-vibrancy v0.8.1
+   Compiling ttf-parser v0.25.1
+   Compiling tauri-plugin-fs v2.6.0
+   Compiling avif-serialize v0.8.9
+   Compiling zune-inflate v0.2.54
+   Compiling heck v0.5.0
+   Compiling bit_field v0.10.3
+   Compiling arrayref v0.3.9
+   Compiling lebe v0.5.3
+   Compiling mime v0.3.17
+   Compiling byteorder-lite v0.1.0
+   Compiling embed_plist v1.2.2
+   Compiling bitflags v1.3.2
+   Compiling fax v0.2.7
+   Compiling pxfm v0.1.30
+   Compiling linked-hash-map v0.5.6
+   Compiling png v0.17.16
+   Compiling tiff v0.11.3
+   Compiling image-webp v0.2.4
+   Compiling exr v1.74.2
+   Compiling ravif v0.13.0
+   Compiling moxcms v0.8.1
+   Compiling tiny-skia-path v0.11.4
+   Compiling indexmap v1.9.3
+   Compiling gif v0.14.2
+   Compiling kurbo v0.11.3
+   Compiling qoi v0.4.1
+   Compiling unicode-script v0.5.8
+   Compiling hashbrown v0.12.3
+   Compiling unicode-bidi-mirroring v0.4.0
+   Compiling tinyvec v1.13.3
+   Compiling unicode-ccc v0.4.0
+   Compiling byteorder v1.5.0
+   Compiling unicode-properties v0.1.4
+   Compiling rfd v0.16.0
+   Compiling rustybuzz v0.20.1
+   Compiling fontdb v0.23.0
+   Compiling image v0.25.10
+   Compiling blake3 v1.8.7
+   Compiling libwebp-sys v0.9.6
+   Compiling svgtypes v0.15.3
+   Compiling tauri-plugin-opener v2.7.0
+   Compiling tauri-plugin-dialog v2.8.1
+   Compiling libheif-sys v5.3.1+1.23.1
+   Compiling mozjpeg-sys v2.2.3
+   Compiling rawloader v0.37.2
+   Compiling yaml-rust v0.4.5
+   Compiling toml v0.5.11
+   Compiling simplecss v0.2.2
+   Compiling xmlwriter v0.1.0
+   Compiling data-url v0.3.2
+   Compiling jpeg-decoder v0.3.2
+   Compiling imagesize v0.13.0
+   Compiling constant_time_eq v0.4.2
+   Compiling pico-args v0.5.0
+   Compiling unicode-bidi v0.3.18
+   Compiling lazy_static v1.5.1
+   Compiling ryu v1.0.23
+   Compiling roxmltree v0.20.0
+   Compiling cpufeatures v0.3.1
+   Compiling base64 v0.22.1
+   Compiling unicode-vo v0.1.0
+   Compiling usvg v0.45.1
+   Compiling serde_yaml v0.8.26
+   Compiling tiff v0.9.1
+   Compiling thiserror v1.0.69
+   Compiling tiny-skia v0.11.4
+   Compiling multicache v0.6.1
+   Compiling dirs-sys v0.4.1
+   Compiling bincode v1.3.3
+   Compiling open v5.4.4
+   Compiling four-cc v0.4.0
+   Compiling libheif-rs v2.7.0
+   Compiling resvg v0.45.1
+   Compiling imagepipe v0.5.1
+   Compiling conversor v0.1.0 (/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri)
+   Compiling dirs v5.0.1
+   Compiling mozjpeg v0.10.13
+   Compiling image v0.24.9
+   Compiling img-parts v0.3.3
+   Compiling num_cpus v1.17.0
+   Compiling webp v0.3.1
+warning: linker stderr: ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[53](jdcolor-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[54](jdmerge-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[55](jcgray-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[56](jccolor-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[57](jquanti-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[58](jidctint-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[59](jfdctflt-sse.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[60](jdsample-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[61](jfdctint-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[62](jchuff-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[63](jcsample-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[64](jsimdcpu.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[65](jcphuff-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[66](jquanti-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[67](jidctflt-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[68](jccolor-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[69](jcgray-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[70](jdmerge-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[71](jdcolor-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[72](jidctred-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[73](jcsample-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[74](jidctfst-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[75](jfdctint-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[76](jdsample-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[77](jfdctfst-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[78](jidctint-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/libmozjpeg_sys-1c142b75f122c287.rlib[79](jquantf-sse2.o)', assuming: macOS
+  |
+  = note: `#[warn(linker_messages)]` on by default
+
+warning: `conversor` (lib) generated 1 warning
+warning: linker stderr: ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[50](jdcolor-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[51](jdmerge-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[52](jcgray-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[53](jccolor-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[54](jquanti-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[55](jidctint-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[56](jfdctflt-sse.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[57](jdsample-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[58](jfdctint-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[59](jchuff-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[60](jcsample-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[61](jsimdcpu.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[62](jcphuff-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[63](jquanti-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[64](jidctflt-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[65](jccolor-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[66](jcgray-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[67](jdmerge-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[68](jdcolor-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[69](jidctred-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[70](jcsample-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[71](jidctfst-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[72](jfdctint-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[73](jdsample-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[74](jfdctfst-sse2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[75](jidctint-avx2.o)', assuming: macOS
+         ld: no platform load command found in '/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/x86_64-apple-darwin/release/deps/rustcqDgBFN/libmozjpeg_sys-1c142b75f122c287.rlib[76](jquantf-sse2.o)', assuming: macOS
+  |
+  = note: `#[warn(linker_messages)]` on by default
+
+warning: `conversor` (bin "conversor") generated 1 warning
+    Finished `release` profile [optimized] target(s) in 7m 36s
+       Built application at: /Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/universal-apple-darwin/release/conversor
+    Bundling Conversor.app (/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/universal-apple-darwin/release/bundle/macos/Conversor.app)
+    Bundling Conversor_0.1.0_universal.dmg (/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/universal-apple-darwin/release/bundle/dmg/Conversor_0.1.0_universal.dmg)
+     Running bundle_dmg.sh
+    Finished 2 bundles at:
+        /Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/universal-apple-darwin/release/bundle/macos/Conversor.app (44.09 MiB)
+        /Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/universal-apple-darwin/release/bundle/dmg/Conversor_0.1.0_universal.dmg (18.92 MiB)
+
+
+Instalador listo:
+/Users/tomas/Documents/Code/APP CONVERSOR TSK/conversor/src-tauri/target/universal-apple-darwin/release/bundle/dmg/Conversor_0.1.0_universal.dmg

@@ -9,7 +9,8 @@
     "tauri": "tauri",
     "sidecar": "node scripts/dev-sidecar.mjs",
     "dev:heic": "tauri dev -- --features heic",
-    "build:heic": "tauri build -- --features heic"
+    "build:heic": "tauri build -- --features heic",
+    "release:mac": "bash scripts/release-macos.sh"
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.1.0",
