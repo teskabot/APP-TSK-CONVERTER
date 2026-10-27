@@ -39,6 +39,10 @@
     ],
     "macOS": {
       "minimumSystemVersion": "11.0"
+    },
+    "resources": {
+      "../AVISOS-DE-TERCEROS.md": "AVISOS-DE-TERCEROS.md",
+      "../licencias/*": "licencias/"
     }
   }
 }
